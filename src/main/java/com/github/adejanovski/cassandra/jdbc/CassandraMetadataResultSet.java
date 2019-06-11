@@ -718,7 +718,6 @@ class CassandraMetadataResultSet extends AbstractResultSet implements CassandraR
         try {
 			return currentRow.getSet(index-1,Class.forName(currentRow.getColumnDefinitions().getType(index-1).getTypeArguments().get(0).getClass().getCanonicalName()));
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			throw new SQLNonTransientException(e);
 		}
      
@@ -730,7 +729,6 @@ class CassandraMetadataResultSet extends AbstractResultSet implements CassandraR
         try {
 			return currentRow.getSet(name,Class.forName(currentRow.getColumnDefinitions().getType(name).getTypeArguments().get(0).getClass().getCanonicalName()));
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			throw new SQLNonTransientException(e);
 		}
         
@@ -1229,13 +1227,11 @@ class CassandraMetadataResultSet extends AbstractResultSet implements CassandraR
 	
 	@Override
 	public RowId getRowId(int columnIndex) throws SQLException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public RowId getRowId(String columnLabel) throws SQLException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -1250,7 +1246,6 @@ class CassandraMetadataResultSet extends AbstractResultSet implements CassandraR
 
 	@Override
 	public InputStream getBinaryStream(String columnLabel) throws SQLException {
-		// TODO Auto-generated method stub
 		checkName(columnLabel);
 		byte[] bytes = new byte[currentRow.getBytes(columnLabel).remaining()];
 		currentRow.getBytes(columnLabel).get(bytes, 0, bytes.length);
