@@ -5,7 +5,7 @@
 
 	<groupId>net.lulli</groupId>
 	<artifactId>jdbc-cassandra3</artifactId>
-	<version>3.1.0-jdk11</version>
+	<version>1.0.0-jdk11</version>
 
 	<packaging>jar</packaging>
 	<name>Cassandra JDBC Wrapper</name>
